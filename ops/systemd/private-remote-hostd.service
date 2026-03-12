@@ -1,0 +1,15 @@
+[Unit]
+Description=Private Remote host agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/private-remote
+Environment=PRIVATE_REMOTE_WORKSPACE_ROOT=/opt/private-remote
+ExecStart=/opt/private-remote/target/release/hostd --broker https://broker.example.com --device-name LinuxHost --platform linux-x11 demo-loop
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

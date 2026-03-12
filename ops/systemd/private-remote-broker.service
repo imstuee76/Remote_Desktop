@@ -1,0 +1,16 @@
+[Unit]
+Description=Private Remote broker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/private-remote
+Environment=PRIVATE_REMOTE_WORKSPACE_ROOT=/opt/private-remote
+Environment=BROKER_ADMIN_TOKEN=replace-me
+ExecStart=/opt/private-remote/target/release/device-broker
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

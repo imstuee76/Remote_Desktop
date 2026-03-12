@@ -1,0 +1,9 @@
+{$BROKER_DOMAIN} {
+    encode zstd gzip
+    reverse_proxy broker:8080
+}
+
+# Add a relay vhost later when the relay service exists.
+# {$RELAY_DOMAIN} {
+#     reverse_proxy relay:9090
+# }

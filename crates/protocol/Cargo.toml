@@ -1,0 +1,8 @@
+[package]
+name = "protocol"
+edition = "2021"
+version = "0.1.0"
+
+[dependencies]
+serde = { workspace = true }
+uuid = { workspace = true }

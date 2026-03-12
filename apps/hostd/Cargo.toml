@@ -1,0 +1,13 @@
+[package]
+name = "hostd"
+edition = "2021"
+version = "0.1.0"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+protocol = { path = "../../crates/protocol" }
+release-meta = { path = "../../crates/release-meta" }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+uuid = { workspace = true }

@@ -1,0 +1,25 @@
+services:
+  broker:
+    build:
+      context: ../../
+      dockerfile: ops/docker/broker.Dockerfile
+    env_file:
+      - ../env/example.env
+    ports:
+      - "8080:8080"
+
+  caddy:
+    image: caddy:2
+    depends_on:
+      - broker
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

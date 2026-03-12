@@ -1,0 +1,9 @@
+[package]
+name = "release-meta"
+edition = "2021"
+version = "0.1.0"
+
+[dependencies]
+protocol = { path = "../protocol" }
+serde = { workspace = true }
+serde_json = { workspace = true }

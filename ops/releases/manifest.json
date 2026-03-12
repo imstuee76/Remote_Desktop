@@ -1,0 +1,24 @@
+{
+  "targets": [
+    {
+      "target": "windows-host",
+      "version": "0.1.0-windows",
+      "build": 1100
+    },
+    {
+      "target": "linux-host",
+      "version": "0.1.0-linux",
+      "build": 2100
+    },
+    {
+      "target": "android-viewer",
+      "version": "0.1.0-android",
+      "build": 3100
+    },
+    {
+      "target": "broker-server",
+      "version": "0.1.0-server",
+      "build": 4100
+    }
+  ]
+}
